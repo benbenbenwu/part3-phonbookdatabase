@@ -106,17 +106,17 @@ router.post('/persons', async (req, res, next) => {
 })
 
 
-// app.use('/.netlify/functions/api', router)
+app.use('/.netlify/functions/api', router)
 
-app.use('/api', router)
+//app.use('/api', router)
 
 
 
 app.use(errorHandler)
 
-app.listen(process.env.PORT || '3001', () => {
+/* app.listen(process.env.PORT || '3001', () => {
   console.log('Listening port 3001......');
-})
-/* module.exports = app;
+}) */
+module.exports = app;
 
-module.exports.handler = serverless(app) */
+module.exports.handler = serverless(app) 
