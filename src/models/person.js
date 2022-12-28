@@ -1,7 +1,6 @@
 
 const mongoose = require('mongoose')
-const url =
-  `mongodb+srv://ben:<password>@cluster0.fq6n4s6.mongodb.net/phonebook?retryWrites=true&w=majority`
+const url = process.env.MANGODB_URI
 
 mongoose.connect(url)
 
